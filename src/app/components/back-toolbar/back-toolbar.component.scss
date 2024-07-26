@@ -1,0 +1,31 @@
+ion-toolbar {
+    --background: var(--primary-color);
+    --ion-color-base: black; /* Optional: Ändert die Textfarbe für besseren Kontrast */
+    --color: white;
+}
+
+ion-back-button {
+  --color: white;
+}
+
+ion-button {
+  --background: transparent;
+  --color: white;
+  --background-activated: transparent;
+  --background-focused: transparent;
+  --background-hover: transparent;
+  --background-selected: transparent;
+  --background-disabled: transparent;
+  --border-color: transparent;
+  --box-shadow: none;
+  --padding: 0;
+  --margin: 0;
+  --border-radius: 0;
+  --text-decoration: none;
+}
+
+
+ion-icon {
+  margin-right: 8px;
+  color: white;
+}

@@ -1,0 +1,19 @@
+h2 {
+    font-size: large;
+}
+
+.name {
+    text-align: center;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--contrast);
+  }
+
+.content {
+    text-align: center;
+    padding: 8px;
+}

@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <app-back-toolbar [title]="'Einkaufsliste erstellen'" [backPage]="'home'"></app-back-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="card-outside">
+    <ion-card>
+      <div class="card">
+        <img src="assets/images/list.png" height="150px"/>
+        <form>
+          <h2>Neue Liste erstellen</h2>
+
+          <br/>
+
+          <div class="input-field">
+            <ion-icon name="calendar-clear-outline"></ion-icon>
+            <label>Name</label>
+            <input required type="text" [(ngModel)]="listName" name="listName"/>
+          </div>
+
+          <ion-button (click)="createList()">
+            + Erstellen
+          </ion-button>
+        </form>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

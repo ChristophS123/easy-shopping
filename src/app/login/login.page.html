@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Anmelden</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="card-outside">
+    <ion-card>
+      <div class="card">
+        <img src="assets/images/R.png" height="200px"/>
+        <form>
+          <h2>Mit SV Studios Account anmelden</h2>
+    
+          <br/>
+    
+          <div class="input-field">
+            <ion-icon name="calendar-clear-outline"></ion-icon>
+            <label>Email</label>
+            <input required type="email" [(ngModel)]="email" name="email"/>
+          </div>
+    
+          <div class="input-field">
+            <ion-icon name="calendar-clear-outline"></ion-icon>
+            <label>Passwort</label>
+            <input required type="password" [(ngModel)]="password" name="password"/>
+          </div>
+
+          <ion-button (click)="login()">
+            Mit SV-Studios anmelden
+          </ion-button>
+        </form>
+      </div>
+    </ion-card>
+
+    <p>Noch keinen Account? Jetzt <a href="https://sv-studios.de/register.php">hier</a> registrieren.</p>
+
+  </div>
+
+</ion-content>

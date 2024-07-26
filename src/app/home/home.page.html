@@ -1,20 +1,56 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+
+<ion-menu contentId="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-menu-toggle slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-menu-toggle>
     </ion-toolbar>
   </ion-header>
+  <ion-content class="ion-padding">
+      <button (click)="navigateToPage('create-list')" class="nav-button">
+        <ion-icon slot="icon-only" name="create"></ion-icon>
+        Liste erstellen
+      </button>
+      <br/>
+      <button (click)="navigateToPage('other-apps')" class="nav-button">
+      <ion-icon slot="icon-only" name="archive-outline"></ion-icon>
+      Unsere anderen Apps
+    </button>
+    <br/>
+    <button (click)="signOut()" class="logout">
+      <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      Abmelden
+    </button>
+  </ion-content>
+</ion-menu>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+<div class="ion-page" id="main-content">
+
+  <ion-header>
+    <ion-toolbar>
+      
+      <ion-menu-toggle slot="start">
+        <ion-menu-button auto-hide="false"></ion-menu-button>
+      </ion-menu-toggle>
+        
+      <ion-title>Easy Shopping</ion-title>
+
+      <ion-buttons slot="end">
+        <ion-button (click)="presentPopover($event)">
+          <img src="{{currentProfileImage}}" class="profile-img">
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+
+  <ion-content class="ion-padding" [fullscreen]="true" >
+    <div *ngFor="let item of shoppingLists">
+      <app-list-list-item [currentList]="item"></app-list-list-item>
+    </div>
+
+  </ion-content>
+
+</div>

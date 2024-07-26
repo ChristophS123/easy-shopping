@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { SharedModule } from '../shared/shared.module';
+import { UserProfilePopoverComponent } from '../components/user-profile-popover/user-profile-popover.component';
+import { ListListItemComponent } from '../components/list-list-item/list-list-item.component';
 
 
 @NgModule({
@@ -12,8 +15,9 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    SharedModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage, UserProfilePopoverComponent, ListListItemComponent]
 })
 export class HomePageModule {}

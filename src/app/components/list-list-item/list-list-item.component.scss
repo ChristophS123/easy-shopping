@@ -1,0 +1,13 @@
+ion-card {
+    background-color: var(--card-color);
+    padding: 16px;
+    font-size: larger;
+    margin-top: 0px;
+}
+
+ion-card ion-icon {
+    scale: 1.2;
+    margin-right: 16px;
+    border-style: none;
+    box-shadow: none;
+}
